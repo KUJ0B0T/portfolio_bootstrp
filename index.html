@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Next?</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="../web/css/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../web/css/slick-1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <!-- 메인로고 및 검색창 섹션 시작 -->
+    <section class="search container mb-2" id="main">
+        <div class="d-flex my-4">
+          <button type="button" class="btn btn-outline-dark ms-auto d-block d-lg-none pt-0" data-bs-toggle="modal" data-bs-target="#mobilelogin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+              <path d="M7.5 1v7h1V1h-1z"/>
+              <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+            </svg>
+          </button>
+          <div class="modal fade" id="mobilelogin" tabindex="-1" aria-labelledby="mobileloginmodal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="mobileloginmodal">로그인 하기</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div>
+                    <form>
+                      <div class="row mb-3">
+                        <label for="inputEmail3" class="col-sm-4 col-form-label  ibm fw-bold text-center">아이디</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control shadow-sm" id="inputEmail3">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="inputPassword3" class="col-sm-4 col-form-label  ibm fw-bold text-center">비밀번호</label>
+                        <div class="col-sm-7">
+                          <input type="password" class="form-control shadow-sm" id="inputPassword3">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-6 text-center">
+                          <button class="btn btn-outline-secondary btn-sm">
+                            <a href="#" class="text-decoration-none link-body-emphasis">회원가입</a>
+                          </button>
+                        </div>
+                        <div class="col-6 text-center">
+                          <button class="btn btn-outline-secondary btn-sm">
+                          <a href="#" class="text-decoration-none text-black link-body-emphasis">ID/PW 찾기</a>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-6 offset-4">
+                          <div class="form-check">
+                            <label class="form-check-label  ibm fw-bold" for="gridCheck1">
+                              아이디 저장
+                            </label>
+                            <input class="form-check-input shadow-sm" type="checkbox" id="gridCheck1">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">닫기</button>
+                  <button type="submit" class="btn btn-dark">로그인</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-2 col-12 text-center">
+                <a href="#" class="">
+                    <img src="./img/로고누끼.png" alt="메인배너" class="logo img-fluid" width=300px>
+                </a>
+            </div>
+            <div class="align-self-center col-md-5 col-12">
+                <div class="input-group mb-3">
+                  <button class="btn btn-secondary dropdown-toggle btn-sm fs-6" type="button" data-bs-toggle="dropdown" aria-expanded="false">카테고리</button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">게임 뉴스</a></li>
+                      <li><a class="dropdown-item" href="#">게임 리뷰</a></li>
+                      <li><a class="dropdown-item" href="#">유저 커뮤니티</a></li>
+                      <li><a class="dropdown-item" href="#">공지사항</a></li>
+                    </ul> 
+                  <input type="text" class="form-control fs-6" aria-label="Text input with dropdown button" placeholder="검색어를 입력하세요">
+                  <button class="btn btn-secondary" type="submit" id="button-addon2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                  </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 메인로고 및 검색창 섹션 끝 -->
+
+    <!-- 네비게이션 시작 -->
+    <section id="nav" class="py-2">
+        <nav class="navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid py-3">
+              <div class="container">
+                <ul class="navbar-nav justify-content-around mb-2 mb-lg-0 text-center fs-5">
+                  <li class="nav-item">
+                    <div class="accordion  accordion-flush" id="nav">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-light fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              게임뉴스&nbsp;&nbsp;&nbsp;</button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse bg-light" data-bs-parent="#nav">
+                            <div class="accordion-body text-center row d-flex justify-content-around">
+                              <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴1</a></p>
+                              <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴2</a></p>
+                              <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴3</a></p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="accordion  accordion-flush" id="nav">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed bg-light fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                          게임 리뷰&nbsp;&nbsp;&nbsp;
+                          </button>
+                        </h2>
+                        <div id="collapsetwo" class="accordion-collapse collapse bg-light" data-bs-parent="#nav">
+                          <div class="accordion-body text-center row d-flex justify-content-around">
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴1</a></p>
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴2</a></p>
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴3</a></p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="accordion  accordion-flush" id="nav">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed bg-light fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+                          유저 커뮤니티&nbsp;&nbsp;&nbsp;
+                          </button>
+                        </h2>
+                        <div id="collapsethree" class="accordion-collapse collapse bg-light" data-bs-parent="#nav">
+                          <div class="accordion-body text-center row d-flex justify-content-around">
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴1</a></p>
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴2</a></p>
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴3</a></p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="accordion  accordion-flush" id="nav">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed bg-light fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+                          공지 사항&nbsp;&nbsp;&nbsp;
+                          </button>
+                        </h2>
+                        <div id="collapsefour" class="accordion-collapse collapse bg-light" data-bs-parent="#nav">
+                          <div class="accordion-body text-center row d-flex justify-content-around">
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴1</a></p>
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴2</a></p>
+                            <p class="col-4 px-4 fs-6"><a href="#" class="text-decoration-none link-dark align-self-center">세부메뉴3</a></p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </section>
+    <!-- 네비게이션 끝 -->
+
+    <!-- 캐러셀&로그인 영역 시작 -->
+    <section id="banner" class="container">
+        <div class="row g-5">
+          <!-- 캐러셀 시작 -->
+            <div class="col-lg-9 col-12">
+              <div id="mainbanner" class="carousel slide carousel-dark rounded">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#mainbanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#mainbanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#mainbanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#mainbanner" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="#"><img src="./img/pve/짭켓몬.jpg" class="d-block w-100 img-fluid rounded" alt="포켓몬이짭월드인것" height="500"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="text-black bg-light" style="--bs-bg-opacity: .5;">출시 8시간만에 판매량 100만 부 달성!</h5>
+                      <p class="text-black bg-light" style="--bs-bg-opacity: .5;">"총켓몬", 게이머들 사이에서 대인기!</p>
+                    </div>
+                    <div class="bg-light p-2 text-center mb-4">
+                      <h5 class="text-black d-block d-md-none fs-6 ">출시 8시간만에 판매량 100만 부 달성!</h5>
+                      <p class="text-black d-block d-md-none fs-6">"총켓몬", 게이머들 사이에서 대인기!</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img src="./img/pvp/정신병.jpg" class="d-block w-100 img-fluid rounded" alt="-롤-" height="500"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="text-black bg-light" style="--bs-bg-opacity: .5;">리그 오브 레전드, 새로운 시즌 시작!</h5>
+                      <p class="text-black bg-light" style="--bs-bg-opacity: .5;">신화&전설 장비 삭제, 협곡의 변화?</p>
+                    </div>
+                    <div class="bg-light p-2 text-center mb-4">
+                      <h5 class="text-black d-block d-md-none fs-6 ">리그 오브 레전드, 새로운 시즌 시작!</h5>
+                      <p class="text-black d-block d-md-none fs-6">신화&전설 장비 삭제, 협곡의 변화?!</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img src="./img/nc근황2.png" class="d-block w-100 img-fluid rounded" alt="nc근황" height="500"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="text-black bg-light" style="--bs-bg-opacity: .5;">NC소프트, 이대로 괜찮은가?</h5>
+                      <p class="text-black bg-light" style="--bs-bg-opacity: .5;">주가 20만원 선 붕괴...미래 전망은?</p>
+                    </div>
+                    <div class="bg-light p-2 text-center mb-4">
+                      <h5 class="text-black d-block d-md-none fs-6 ">NC소프트, 이대로 괜찮은가?</h5>
+                      <p class="text-black d-block d-md-none fs-6">주가 20만원 선 붕괴...미래 전망은?</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img src="./img/pve/투더발할라.jpg" class="d-block w-100 img-fluid rounded" alt="목격자가없으면암살이다" height="500"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="text-black bg-light" style="--bs-bg-opacity: .5;">한파 특집 : 한파 특집 : 상남자의 상징, "바이킹"</h5>
+                      <p class="text-black bg-light" style="--bs-bg-opacity: .5;">바이킹과 암살자, 그리고 신조</p>
+                    </div>
+                    <div class="bg-light p-2 text-center mb-4">
+                      <h5 class="text-black d-block d-md-none fs-6 ">한파 특집 : 상남자의 상징, "바이킹"</h5>
+                      <p class="text-black d-block d-md-none fs-6">바이킹과 암살자, 그리고 신화</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainbanner" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainbanner" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <!-- 캐러셀 끝 -->
+          <!-- 로그인 파트 시작 -->
+          <div class="py-3 mb-5 col-lg-3 text-center d-none d-lg-block align-self-center border shadow rounded-4 bg-white">
+            <p class="py-4"><img src="./img/who (1).png" alt="로고2" height="150px"></p>
+            <div>
+              <form>
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-4 col-form-label  ibm fw-bold text-center">ID:</label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control shadow-sm" id="inputEmail3">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputPassword3" class="col-sm-4 col-form-label  ibm fw-bold text-center">PW:</label>
+                  <div class="col-sm-7">
+                    <input type="password" class="form-control shadow-sm" id="inputPassword3">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <a href="#" class="text-decoration-none text-black link-body-emphasis">회원가입</a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#" class="text-decoration-none text-black link-body-emphasis">ID/PW 찾기</a>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                      <label class="form-check-label  ibm fw-bold" for="gridCheck1">
+                        아이디 저장
+                      </label>
+                      <input class="form-check-input shadow-sm" type="checkbox" id="gridCheck1">
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark  ibm fw-bold">로그인</button>
+              </form>
+            </div>
+          </div>
+          <!-- 로그인 파트 끝 -->
+        </div>
+    </section>
+    <!-- 캐러셀 영역 끝 -->
+
+    <!-- 핫리뷰&최근등록글 시작 -->
+    <section class="container py-3 px-0">
+      <div class="row g-4">
+        <!-- 핫리뷰 시작 -->
+        <div class="col-md-9 col-12">
+          <div class="hotreview-border rounded-3">
+            <div class="border-bottom border-1 py-1 bg-white" id="hotreview">
+              <h2 class="text-center pt-4 text-danger"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+              </svg>금주 핫 NEXT</h2>
+              <p class="text-secondary m-0 text-end pe-3 fs-6">2024년 1월 4주차</p>
+            </div>
+            <div class="row g-4 bg-white m-0 rounded-bottom-4">
+              <div class="col-4 my-3 ">
+                <div class="card">
+                  <img src="./img/pvp/더파이널스.webp" class="card-img-top img-fluid" alt="금고털이" style="height: auto;">
+                  <div class="card-body d-none d-md-block">
+                    <h5 class="card-title fs-6 mb-0 fw-bold text-truncate">"3명이 모이면 한명은 쓰레기다" "소짜하지마라"</h5>
+                    <p class="card-text m-0"><small class="text-body-secondary">더 파이널스</small></p>
+                    <a href="#" class="card-link text-secondary stretched-link"><small>자세히 보기</small></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 my-3">
+                <div class="card">
+                  <img src="./img/pve/발더스게이트3.webp" class="card-img-top img-fluid" alt="자유도갓겜" style="height: auto;">
+                  <div class="card-body d-none d-md-block">
+                    <h5 class="card-title fs-6 mb-0 fw-bold text-truncate">무한한 자유도, 깊은 감동! 역시 명작은 다르다!</h5>
+                    <p class="card-text m-0"><small class="text-body-secondary">발더스 게이트3</small></p>
+                    <a href="#" class="card-link text-secondary stretched-link"><small>자세히 보기</small></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 my-3 ">
+                <div class="card">
+                  <img src="./img/pve/방사능뉴베가스.webp" class="card-img-top img-fluid" alt="볼트에입주하세요!" style="height: auto;">
+                  <div class="card-body d-none d-md-block">
+                    <h5 class="card-title fs-6 mb-0 fw-bold text-truncate">물과 밥이 사람보다 비싸다, 총알은 좋은 협상수단 </h5>
+                    <p class="card-text m-0"><small class="text-body-secondary">폴아웃: 뉴 베가스</small></p>
+                    <a href="#" class="card-link text-secondary stretched-link"><small>자세히 보기</small></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 핫리뷰 끝 -->
+        <!-- 최근등록글 시작 -->
+        <div class="col-md-3 d-none d-md-block bg-white rounded-3 p-0 d-flex flex-column recentpost">
+            <div class="border-bottom text-center py-4 mx-0 mb-4 mb-md-5 mb-lg-2">
+              <p class="m-auto fw-bold fs-5 ibm fw-bold">최근 등록글</p>
+            </div>
+            <div class="align-self-center flex-column ps-2 mt-0">
+              <p class="mb-4"><a href="#" class="link-dark text-decoration-none">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a></p>
+              <p class="mb-4"><a href="#" class="link-dark text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></p>
+              <p class="mb-4"><a href="#" class="link-dark text-decoration-none">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></p>
+              <p class="mb-4"><a href="#" class="link-dark text-decoration-none d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></p>
+              <p class="mb-4"><a href="#" class="link-dark text-decoration-none d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></p>
+              <p class="mb-4"><a href="#" class="link-dark text-decoration-none d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></p>
+              <p class="mb-4"><a href="#" class="link-dark text-decoration-none d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></p>
+            </div>
+        </div>
+        <!-- 최근등록글 끝 -->
+      </div>
+    </section>
+    <!-- 핫리뷰&최근등록글 끝 -->
+
+    <!-- 게시판미리보기&광고 시작 -->
+    <section class="container">
+      <!-- 게시판 미리보기&광고1 시작 -->
+      <div class="row mb-md-4 mb-3">
+        <div class="col-lg-5 col-md-6 col-12 rounded-3 p-0 me-lg-2 inginews mt-3">
+          <h3 class="border-bottom border-2 m-0 p-3 ">인기 뉴스 글</h3>
+          <div class="d-flex justify-content-around pt-3 row">
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/pvp/철주먹.webp" alt="뉴비는가라" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>히트스매시로 <br>새롭게 돌아왔다!
+              </a>
+            </p>
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/pve/초록색이젤다죠.jpg" alt="왕눈이" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>젤다의 전설, 야생의 숨결에 <br>숨겨진 이야기(1)
+              </a>
+            </p>
+          </div>
+          <div class="d-flex justify-content-around row">
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/pve/뽀삐쁠땀3.jpg" alt="빠삐" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>파피 플레이타임3 <br>1월31일 출시!
+              </a>
+            </p>
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/pvp/돌겜.webp" alt="55도발왜하냐고" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>하스스톤 <br>새로운 컨셉 "발굴" 공개! <br>메타 변화가 올까?
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 col-12 rounded-3 p-0 ms-lg-2 ingireview mt-3">
+          <h3 class="border-bottom m-0 p-3 border-2 ">인기 리뷰 글</h3>
+          <div class="d-flex justify-content-around pt-3 row">
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/이미지업음.png " alt="이미지없음" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 border img-thumbnail"><br>양산형에 지친 당신.    <br>이 게임을 해라.
+              </a>
+            </p>
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/pve/슶탒핎듮.jpg" alt="하남아닙니다" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>스타필드 <br>광고가 컨텐츠인 겜
+              </a>
+            </p>
+          </div>
+          <div class="d-flex justify-content-around row">
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/pve/FTLMV.png" alt="GODFLAG" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>FTL : MultiVerse <br>본편급 유저모드 리뷰!
+              </a>
+            </p>
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/pve/근전.jpg" alt="걸어서총굴속으로" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>엔터더 건전 <br>구르고 쏘고 굴러라
+              </a>
+            </p>
+          </div>
+        </div>
+        <!-- 광고 -->
+        <div class="col-lg-1 d-lg-block d-none ms-3">
+          <a href="#"><img src="./img/동상.png" alt="이상하오" style="width: 175px; height: 550px;" class="v-100"></a> <!--세로광고-->
+        </div>
+        <div class="row d-none d-lg-none d-md-block  p-0 m-0">
+          <div class="d-flex justify-content-around p-0">
+            <div class="col-6 pe-1 mx-0 my-3">
+              <a href="#"><img src="./img/사전ㅇ예ㅑㄱ.png" alt="뭔겜이야" class="img-fluid border border-4" style="height: 130px;width: 370px;"></a>
+            </div>
+            <div class="col-6 ps-1 mx-0 my-3">
+              <a href="#"><img src="./img/메.png" alt="조작겜" class="img-fluid border border-4" style="height: 130px;width: 370px;"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 d-md-none mt-3 p-0">
+          <a href="https://store.steampowered.com/app/736260/Baba_Is_You/?l=koreana"><img src="./img/pve/바보이스미.jpg" alt="난바보야" class="img-fluid" style="height: 130px;width: 370px;"></a>
+        </div>
+      </div>
+      <!-- 게시판 미리보기&광고1 끝 -->
+
+      <!-- 게시판 미리보기&광고2 시작 -->
+      <div class="row mb-md-4 mb-3">
+        <div class="col-lg-5 col-md-6 col-12 rounded-3 p-0 me-lg-2 ingicommu mt-3">
+          <h3 class="border-bottom m-0 p-3 border-2 ">인기 커뮤니티 글</h3>
+          <div class="d-flex justify-content-around pt-3 row">
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/일하기좋은회사.jpg" alt="내가일할회사는없나" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>(자유 커뮤니티)<br>(펌)일하기 좋은 회사 Top 10
+              </a>
+            </p>
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/운영이쓰레기.jpg" alt="펄어비스" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>(유머 게시판)<br>검은사막 요즘 망한이유.jpg
+              </a>
+            </p>
+          </div>
+          <div class="d-flex justify-content-around row">
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/nc솦.jpg" alt="nc" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>(자유 커뮤니티)<br>NC소프트 주식 물린사람?
+              </a>
+            </p>
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/한파.jfif" alt="춥다" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>(리그 커뮤니티)<br>히오스 리그 근황.jpg
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 col-12 rounded-3 p-0 ms-lg-2 recentnotice mt-3">
+          <h3 class="border-bottom border-2 m-0 p-3">최근 공지사항</h3>
+          <div class="d-flex justify-content-around pt-3 row">
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/이미지업음.png " alt="이미지없음" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 border img-thumbnail"><br>2024.01.30<br>
+                사이트 접속오류 해결 공지</a>
+            </p>
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/이미지업음.png " alt="왕눈이" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>2024.01.20<br>악성 유저 제재 현황
+              </a>
+            </p>
+          </div>
+          <div class="d-flex justify-content-around row">
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/이미지업음.png " alt="빠삐" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>2024.01.13<br>악성 유저 제재 현황
+              </a>
+            </p>
+            <p class="text-center text-break col-5">
+              <a href="#" class="text-decoration-none link-body-emphasis">
+                <img src="./img/이미지업음.png " alt="55도발왜하냐고" style="width: 200px; height: 150px;" class="img-fluid mb-2 rounded-2 img-thumbnail"><br>사이트 도메인 변경 안내<br>
+              </a>
+            </p>
+          </div>
+        </div>
+        <!-- 광고 -->
+        <div class="col-lg-1 d-lg-block d-none ms-3">
+          <a href="#"><img src="./img/든파배너.png" alt="던" style="width: 175px; height: 550px;" class="v-100"></a> <!--세로광고-->
+        </div>
+        <div class="col-12 d-block d-md-none mt-3 mb-0 p-0">
+          <a href="#"><img src="./img/pve/스컬.jpeg" alt="머리돌리기" class="img-fluid" style="height: 130px;width: 370px;"></a>
+        </div>
+      </div>
+      <!-- 게시판 미리보기&광고2 끝 -->
+    </section>
+    <!-- 게시판미리보기&광고 끝 -->
+    
+    <!-- 게임 평점 섹션 시작 -->
+    <section class="my-4 container py-3 scorestar rounded-3">
+      <!-- 섹션 제목 -->
+      <div class="row d-flex justify-content-between ps-4">
+        <div class="col-md-6 border rounded-4 py-3 px-4 align-self-center ms-md-3 d-none d-md-block bg-success">
+          <h4 class="text-start fw-bold m-0 d-none d-md-block text-white">최근 변경된 Next☆스코어</h4>
+        </div>
+        <div class="d-md-none border rounded-4 py-3 px-0 w-75 bg-success">
+          <p class="text-center fw-bold p-0 ibm fw-bold fs-6 m-auto text-white">최근 변경된 Next☆스코어</p>
+        </div>
+        <p class="col-auto me-3 my-0 d-none d-md-block fs-5 text-secondary">2024.02.01 기준</p>
+        <p class="col-auto align-self-center mt-2 mb-0 d-md-none ms-auto text-secondary"><small>2024.02.01 기준</small></p>
+      </div>
+      <hr class="mt-4">
+      <!-- 게임별점 -->
+        <div class="row d-none d-md-flex mt-5">
+          <div class="col-3 d-flex flex-column align-items-center justify-content-around">
+            <img src="./img/pvp/타르꼬프.jpg" alt="이미지없음" class="img-fluid rounded-circle mb-3" style="height: 200px; width: 200px;">
+            <h5 class="text-center fw-bold mb-3">Escape from Tarkof</h5>
+            <p class="border rounded-pill text-center px-3 py-1 bg-success text-white">★ 3.8점</p>
+          </div>
+          <div class="col-3 d-flex flex-column align-items-center justify-content-around">
+            <img src="./img/pve/벌레조아.jpg" alt="벌러조아" class="img-fluid rounded-circle mb-3" style="height: 200px; width: 200px;">
+            <h5 class="text-center fw-bold mb-3">Grounded</h5>
+            <p class="border rounded-pill text-center px-3 py-1 bg-success text-white">★ 3.5점</p>
+          </div>
+          <div class="col-3 d-flex flex-column align-items-center justify-content-around">
+            <img src="./img/오우스냅.jpg" alt="스내앱" class="img-fluid rounded-circle mb-3" style="height: 200px; width: 200px;">
+            <h5 class="text-center fw-bold mb-3">Marvel Snap</h5>
+            <p class="border rounded-pill text-center px-3 py-1 bg-success text-white">★ 3.1점</p>
+          </div>
+          <div class="col-3 d-flex flex-column align-items-center justify-content-around">
+            <img src="./img/킹덤컴.jpg" alt="킹덤컴" class="img-fluid rounded-circle mb-3" style="height: 200px; width: 200px;">
+            <h5 class="text-center fw-bold mb-3">LingdomCome : Deliverance</h5>
+            <p class="border rounded-pill text-center px-3 py-1 bg-success text-white">★ 4.3점</p>
+          </div>
+        </div>
+        <div class="row d-md-none mt-0">
+          <div class="col-6 d-flex flex-column justify-content-between align-items-center mb-4 px-2">
+            <img src="./img/pvp/타르꼬프.jpg" alt="이미지없음" class="img-fluid rounded-circle mb-3" style="height: 150px; width: 150px;">
+            <h5 class="text-center fw-bold mb-3">Escape from Tarkof</h5>
+            <p class="border rounded-pill text-center py-1 fs-5 px-3 m-0 fw-bold bg-success text-white">★ 3.8점</p>
+          </div>
+          <div class="col-6 d-flex flex-column justify-content-between align-items-center mb-4 px-2">
+            <img src="./img/pve/벌레조아.jpg" alt="그라운디드" class="img-fluid rounded-circle mb-3" style="height: 150px; width: 150px;">
+            <h5 class="text-center fw-bold mb-3">Grounded</h5>
+            <p class="border rounded-pill text-center py-1 fs-5 px-3 m-0 fw-bold bg-success text-white">★ 3.5점</p>
+          </div>
+          <div class="col-6 d-flex flex-column justify-content-between align-items-center mb-4 px-2">
+            <img src="./img/오우스냅.jpg" alt="스내앱" class="img-fluid rounded-circle mb-3" style="height: 150px; width: 150px;">
+            <h5 class="text-center fw-bold mb-3">Marvel Snap</h5>
+            <p class="border rounded-pill text-center py-1 fs-5 px-3 m-0 fw-bold bg-success text-white">★ 3.1점</p>
+          </div>
+          <div class="col-6 d-flex flex-column justify-content-between align-items-center mb-4 px-2">
+            <img src="./img/킹덤컴.jpg" alt="킹덤컴" class="img-fluid rounded-circle mb-3" style="height: 150px; width: 150px;">
+            <h5 class="text-center fw-bold mb-3">LingdomCome : Deliverance</h5>
+            <p class="border rounded-pill text-center py-1 fs-5 px-3 m-0 fw-bold bg-success text-white">★ 4.3점</p>
+          </div>
+        </div>
+    </section>
+    <!-- 게임 평점 섹션 끝 -->
+
+    <hr class="container mt-5 d-none d-md-block">
+    <hr class="container mt-5 d-md-none ms-1">
+
+    <!-- 하단부 시작 -->
+    <footer class="container d-md-block d-none px-0 pb-4 justify-content-around">
+      <div class="row px-0 d-flex align-self-center justify-content-center">
+        <div class="d-lg-flex d-md-block justify-content-center align-items-center mx-auto col-8 col-md-6 pt-5">  
+          <div class="pe-0">
+            <img src="./img/로고누끼.png" alt="로고" class="img-fluid d-none d-lg-inline" style="height: 350px; width: 500px;">
+            <img src="./img/로고누끼.png" alt="로고" class="img-fluid d-lg-none" style="height: 200px; width: 500px;">
+          </div>
+          <div class="d-lg-flex flex-column justify-content-center px-5 d-none">
+            <a href="#" class="mb-5 text-decoration-none text-danger"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+            </svg></a>
+            <a href="#" class="mb-5 text-decoration-none text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg></a>
+            <a href="#" class="mb-5 text-decoration-none text-warning"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg></a>
+            <a href="#" class=" text-decoration-none text-info"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg></a>
+          </div>
+          <div class="d-md-flex d-lg-none justify-content-around px-3">
+            <a href="#" class="mb-5 text-decoration-none text-danger"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+            </svg></a>
+            <a href="#" class="mb-5 text-decoration-none text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg></a>
+            <a href="#" class="mb-5 text-decoration-none text-warning"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg></a>
+            <a href="#" class=" text-decoration-none text-info"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-around mb-0">
+        <div class="m-2 d-flex flex-column justify-content-center align-items-center col-md-3 col-lg-3">
+          <div class="mb-4">
+            <img src="./img/디스코드.png" alt="디코" class="img-fluid" style="height: 180px; width: auto;">
+          </div>
+          <h2 class="mb-5">
+            Join Our<br>Discord! 
+          </h2>
+          <div class="dico">
+            <a href="#" class="text-decoration-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+              </svg>
+            </a>
+          </div>  
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3 mx-2 col-md-3 col-lg-4">
+          <h4 class="my-auto text-center py-4 fw-bold">연관 사이트</h4>
+          <div class="d-flex flex-column justify-content-around align-items-center">
+            <a href="#" class="text-decoration-none "><img src="./img/게임잡.PNG" alt="스티브잡" class="img-fluid p-3" style="width: 180px; height: 60px;"></a>
+            <a href="#" class="text-decoration-none"><img src="./img/취지직.png" alt="취지직" class="img-fluid px-3 pt-4 pb-1" style="width: 180px; height: 75px;"></a>
+            <a href="#" class="text-decoration-none"><img src="./img/헝그리앱.png" alt="헝앱" class="img-fluid px-3 pt-3 pb-2" style="width: 180px; height: 75px;"></a>
+            <a href="#" class="text-decoration-none"><img src="./img/인벤로고-removebg-preview.png" alt="인벤" class="img-fluid p-3" style="width: 180px; height: 100px;"></a>
+          </div>
+        </div>
+        <div class=" p-4 d-md-flex align-items-center text-center justify-content-around mx-3 col-12 d-lg-none d-none">
+          <p class="fs-6 ibm fw-bold"><a href="#" class="text-decoration-none text-black">사이트소개</a></p>
+          <p class="fs-6 ibm fw-bold"><a href="#" class="text-decoration-none text-black">비즈니스</a></p>
+          <p class="fs-6 ibm fw-bold"><a href="#" class="text-decoration-none text-black">이용약관</a></p>
+          <p class="fs-6 ibm fw-bold"><a href="#" class="text-decoration-none text-black">개인정보 처리 방침</a></p>
+          <p class="fs-6 ibm fw-bold"><a href="#" class="text-decoration-none text-black">공지사항</a></p>
+        </div>
+        <div class=" d-lg-flex flex-column align-items-center text-center justify-content-around mx-3 col-lg-3 d-none">
+          <p class="fs-5 ibm fw-bold mb-3"><a href="#" class="text-decoration-none text-black">사이트소개</a></p>
+          <p class="fs-5 ibm fw-bold mb-3"><a href="#" class="text-decoration-none text-black">비즈니스</a></p>
+          <p class="fs-5 ibm fw-bold mb-3"><a href="#" class="text-decoration-none text-black">이용약관</a></p>
+          <p class="fs-5 ibm fw-bold mb-3"><a href="#" class="text-decoration-none text-black">개인정보처리 방침</a></p>
+          <p class="fs-5 ibm fw-bold mb-3"><a href="#" class="text-decoration-none text-black">공지사항</a></p>
+        </div>
+      </div>
+      <p class="text-center p-0 m-0 text-secondary fs-6">Copyrightⓒ <strong class="text-success">WhatisNext?</strong>. All rights reserved.</p>
+    </footer>
+    <!-- 모바일 하단부 -->
+    <footer class="container d-md-none pb-2 justify-content-center">
+      <div class="d-md-none m-0 ms-2 p-2">
+        <div class=" px-3">
+          <img src="./img/로고누끼.png" alt="로고" class="img-fluid" style="height: 200px; width: 270px;">
+        </div>
+        <div class="d-flex justify-content-around px-3 py-0">
+          <a href="#" class=" text-decoration-none text-danger"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+          </svg></a>
+          <a href="#" class=" text-decoration-none text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg></a>
+          <a href="#" class=" text-decoration-none text-warning"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+          </svg></a>
+          <a href="#" class=" text-decoration-none text-info"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg></a>
+        </div>
+      </div>
+      <div class="d-md-none d-block">
+        <div class="p-3 d-flex flex-column justify-content-center align-items-center">
+          <div>
+            <img src="./img/디스코드.png" alt="디코" class="img-fluid" style="height: 180px; width: auto;">
+          </div>
+          <h3>
+            Join Our<br>Discord! 
+          </h3>
+          <div class="dico">
+            <a href="#" class="text-decoration-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+              </svg>
+            </a>
+          </div>  
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3">
+          <h4 class="my-auto text-center py-4 fw-bold">연관 사이트</h4>
+          <div class="d-flex flex-column justify-content-around align-items-center">
+            <a href="#" class="text-decoration-none"><img src="./img/게임잡.PNG" alt="스티브잡" class="img-fluid p-3" style="width: 180px; height: 60px;"></a>
+            <a href="#" class="text-decoration-none"><img src="./img/취지직.png" alt="취지직" class="img-fluid px-3 pt-4 " style="width: 160px; height: 60px;"></a>
+            <a href="#" class="text-decoration-none"><img src="./img/헝그리앱.png" alt="헝앱" class="img-fluid px-3 pt-3 " style="width: 160px; height: 60px;"></a>
+            <a href="#" class="text-decoration-none"><img src="./img/인벤로고-removebg-preview.png" alt="인벤" class="img-fluid p-3" style="width: 160px; height: 85px;"></a>
+          </div>
+        </div>
+        <div class="p-4 pt-0 d-flex flex-column align-items-center text-center justify-content-around">
+          <p class="fs-6 m-2 ibm fw-bold"><a href="#" class="text-decoration-none text-black">사이트소개</a></p>
+          <p class="fs-6 m-2 ibm fw-bold"><a href="#" class="text-decoration-none text-black">비즈니스</a></p>
+          <p class="fs-6 m-2 ibm fw-bold"><a href="#" class="text-decoration-none text-black">이용약관</a></p>
+          <p class="fs-6 m-2 ibm fw-bold"><a href="#" class="text-decoration-none text-black">개인정보처리 방침</a></p>
+          <p class="fs-6 m-2 ibm fw-bold"><a href="#" class="text-decoration-none text-black">공지사항</a></p>
+        </div>
+      </div>
+      <p class="text-center p-0 m-0 text-secondary fs-6">Copyrightⓒ <strong class="text-success">WhatisNext?</strong>.<br>All rights reserved.</p>
+    </footer>
+    <!-- 하단부 끝 -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./css/slick-1.8.1/slick/slick.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&family=Noto+Sans+KR&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1, h2, h3, h4, h5 .ibm {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+/* 메인로고 및 검색창 섹션 시작*/
+#main {
+    background-image: url(../img/배너용/배너2.png);
+    background-position: center;
+    background-size: cover;
+}
+/* 메인로고 및 검색창 섹션 끝 */
+
+#selectbox {
+    margin: 0;
+    padding: auto;
+    text-align:center;
+}
+
+/* #hotreview {
+    background-image:linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .2)), url(../img/크와앙.jpg);
+    background-position: center;
+    background-size: auto;
+    background-attachment: scroll;
+    border-radius: 1rem 1rem 0 0;
+} */
+
+.hotreview-border {
+    border-top: 10px solid rgb(236, 65, 35);
+    /*border-left: 1px solid rgb(189, 189, 189);
+    border-right: 1px solid rgb(189, 189, 189);
+    border-bottom: 1px solid rgb(189, 189, 189);*/
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.recentpost {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 10px solid rgb(0, 0, 0);
+}
+
+
+.inginews {
+    border-top: 10px solid rgb(39, 108, 236);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.ingireview {
+    border-top: 10px solid rgb(113, 59, 240);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.ingicommu {
+    border-top: 10px solid rgb(255, 230, 4);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.recentnotice {
+    border-top: 10px solid rgb(0, 255, 255);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.scorestar {
+    border-top: 10px solid rgb(0, 119, 30);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.dico {
+    color: rgb(55, 14, 236);
+}
